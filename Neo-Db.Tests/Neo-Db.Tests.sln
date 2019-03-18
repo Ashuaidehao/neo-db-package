@@ -3,9 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neo-Db.Tests", "Neo-Db.Tests\Neo-Db.Tests.csproj", "{79B82CD4-2DCF-4FAA-B11E-36216BC530A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo-Db.Tests", "Neo-Db.Tests\Neo-Db.Tests.csproj", "{79B82CD4-2DCF-4FAA-B11E-36216BC530A0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neo", "..\neo\neo\neo.csproj", "{18CBCE16-F2C0-4319-B1B7-33A8524E5976}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neo-cli", "..\neo-cli\neo-cli\neo-cli.csproj", "{511ACDD4-19AC-457C-875E-E246FF012A31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plugins", "plugins", "{2CD7845A-E9BD-4951-AF5E-4243DB2D4936}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationLogs", "..\neo-plugins\ApplicationLogs\ApplicationLogs.csproj", "{1AB29B4A-428B-480B-8903-5D131DD29831}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportBlocks", "..\neo-plugins\ImportBlocks\ImportBlocks.csproj", "{EC4F2583-C48E-4437-B218-408036827929}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpcNep5Tracker", "..\neo-plugins\RpcNep5Tracker\RpcNep5Tracker.csproj", "{8259FEA7-E49B-4DF6-A292-12ACFBC61763}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpcSecurity", "..\neo-plugins\RpcSecurity\RpcSecurity.csproj", "{5C46F77A-3AB0-4531-909F-0EF29012F33E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpcWallet", "..\neo-plugins\RpcWallet\RpcWallet.csproj", "{B75D79BD-CF80-4A8F-8D90-87C2C772E24A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplePolicy", "..\neo-plugins\SimplePolicy\SimplePolicy.csproj", "{FD43FA9E-A180-4109-A4D8-63899B6EB2C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatesDumper", "..\neo-plugins\StatesDumper\StatesDumper.csproj", "{0E9F2D9E-E189-4249-8C07-6954A1BABF48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +39,50 @@ Global
 		{18CBCE16-F2C0-4319-B1B7-33A8524E5976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18CBCE16-F2C0-4319-B1B7-33A8524E5976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18CBCE16-F2C0-4319-B1B7-33A8524E5976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511ACDD4-19AC-457C-875E-E246FF012A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511ACDD4-19AC-457C-875E-E246FF012A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511ACDD4-19AC-457C-875E-E246FF012A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511ACDD4-19AC-457C-875E-E246FF012A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB29B4A-428B-480B-8903-5D131DD29831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB29B4A-428B-480B-8903-5D131DD29831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB29B4A-428B-480B-8903-5D131DD29831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB29B4A-428B-480B-8903-5D131DD29831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4F2583-C48E-4437-B218-408036827929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4F2583-C48E-4437-B218-408036827929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4F2583-C48E-4437-B218-408036827929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4F2583-C48E-4437-B218-408036827929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8259FEA7-E49B-4DF6-A292-12ACFBC61763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8259FEA7-E49B-4DF6-A292-12ACFBC61763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8259FEA7-E49B-4DF6-A292-12ACFBC61763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8259FEA7-E49B-4DF6-A292-12ACFBC61763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C46F77A-3AB0-4531-909F-0EF29012F33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C46F77A-3AB0-4531-909F-0EF29012F33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C46F77A-3AB0-4531-909F-0EF29012F33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C46F77A-3AB0-4531-909F-0EF29012F33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75D79BD-CF80-4A8F-8D90-87C2C772E24A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75D79BD-CF80-4A8F-8D90-87C2C772E24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75D79BD-CF80-4A8F-8D90-87C2C772E24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75D79BD-CF80-4A8F-8D90-87C2C772E24A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD43FA9E-A180-4109-A4D8-63899B6EB2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD43FA9E-A180-4109-A4D8-63899B6EB2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD43FA9E-A180-4109-A4D8-63899B6EB2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD43FA9E-A180-4109-A4D8-63899B6EB2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9F2D9E-E189-4249-8C07-6954A1BABF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9F2D9E-E189-4249-8C07-6954A1BABF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9F2D9E-E189-4249-8C07-6954A1BABF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9F2D9E-E189-4249-8C07-6954A1BABF48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1AB29B4A-428B-480B-8903-5D131DD29831} = {2CD7845A-E9BD-4951-AF5E-4243DB2D4936}
+		{EC4F2583-C48E-4437-B218-408036827929} = {2CD7845A-E9BD-4951-AF5E-4243DB2D4936}
+		{8259FEA7-E49B-4DF6-A292-12ACFBC61763} = {2CD7845A-E9BD-4951-AF5E-4243DB2D4936}
+		{5C46F77A-3AB0-4531-909F-0EF29012F33E} = {2CD7845A-E9BD-4951-AF5E-4243DB2D4936}
+		{B75D79BD-CF80-4A8F-8D90-87C2C772E24A} = {2CD7845A-E9BD-4951-AF5E-4243DB2D4936}
+		{FD43FA9E-A180-4109-A4D8-63899B6EB2C8} = {2CD7845A-E9BD-4951-AF5E-4243DB2D4936}
+		{0E9F2D9E-E189-4249-8C07-6954A1BABF48} = {2CD7845A-E9BD-4951-AF5E-4243DB2D4936}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4759D8F9-45A7-4736-844F-C87416077291}
