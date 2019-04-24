@@ -19,6 +19,7 @@ namespace Neo
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             new WebHostBuilder().UseKestrel()
+                .ConfigureLogging(logging=>logging.AddConsole())
                 .UseStartup<Startup>();
     }
 }

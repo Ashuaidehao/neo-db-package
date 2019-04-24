@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
-using Anemonis.AspNetCore.JsonRpc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Neo
 {
@@ -30,18 +30,22 @@ namespace Neo
                 options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "application/json-rpc" });
             });
 
-            services.AddJsonRpc();
+            //services.AddJsonRpc();
+
+            services.AddNeoJsonRpc();
+            services.AddScoped<JsonRpcMiddleware>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
+            if (env.IsDevelopment())
+            {
 
-            app.UseJsonRpc();
+            }
+
+            //app.UseJsonRpc();
+            app.UseMiddleware<JsonRpcMiddleware>();
             //app.Run(async (context) =>
             //{
             //    await context.Response.WriteAsync("Hello World!");
