@@ -65,10 +65,12 @@ namespace Neo
                         var rawRequest = JsonConvert.DeserializeObject<JToken>(await reader.ReadToEndAsync());
                         if (rawRequest.Type == JTokenType.Array)
                         {
+                            // batch request
                             requests = rawRequest.ToObject<List<RpcRequest>>();
                         }
                         else
                         {
+                            // single request
                             request = rawRequest.ToObject<RpcRequest>();
                         }
 
