@@ -20,7 +20,7 @@ namespace Neo.Services.Models
         public TransactionAttribute[] TransactionAttribute { get; set; }
 
         public InputCoinRequest[] Inputs { get; set; }
-        public TransactionOutput[] Outputs { get; set; }
+        public OutoutCoinRequest[] Outputs { get; set; }
 
         /// <summary>
         /// 收款地址
@@ -32,10 +32,10 @@ namespace Neo.Services.Models
         /// </summary>
         public string Amount { get; set; }
 
-        /// <summary>
-        /// 私钥
-        /// </summary>
-        public string PrivateKey { get; set; }
+        ///// <summary>
+        ///// 私钥
+        ///// </summary>
+        //public string PrivateKey { get; set; }
     }
 
     public class InputCoinRequest
@@ -48,5 +48,12 @@ namespace Neo.Services.Models
         /// 指向的UTXO所在的交易的output的位置。从0开始。
         /// </summary>
         public ushort PrevIndex { get; set; }
+    }
+
+    public class OutoutCoinRequest
+    {
+        public string Asset { get; set; }
+        public string Value { get; set; }
+        public string Address { get; set; }
     }
 }

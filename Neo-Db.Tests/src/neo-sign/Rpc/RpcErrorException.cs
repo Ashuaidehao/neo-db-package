@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Neo.Rpc
 {
-    public class RpcException : Exception
+    public class RpcErrorException : Exception
     {
-        public RpcException(RpcErrorCode code, string message) : base(message)
+        public RpcErrorException(RpcErrorCode code, string message) : base(message)
         {
             Code = code;
         }

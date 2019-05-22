@@ -104,13 +104,13 @@ namespace Neo
             {
                 response = await _handler.InvokeAsync(request);
             }
-            catch (RpcException rpcException)
+            catch (RpcErrorException rpcException)
             {
-                response.Error = new RpcError(rpcException.Code, rpcException.Message);
+                response.Error = new RpcError(rpcException.Code, rpcException.Message) { Data = new { Stack = rpcException.StackTrace } };
             }
             catch (Exception ex)
             {
-                response.Error = new RpcError(RpcErrorCode.InternalError, ex.Message);
+                response.Error = new RpcError(RpcErrorCode.InternalError, ex.Message) { Data = new { Stack = ex.StackTrace } };
             }
             return response;
         }
