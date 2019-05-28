@@ -7,3 +7,6 @@
 [submodule "neo-plugins"]
 	path = neo-plugins
 	url = https://github.com/Ashuaidehao/neo-plugins.git
+[submodule "neo-vm"]
+	path = neo-vm
+	url = git@github.com:Ashuaidehao/neo-vm.git
