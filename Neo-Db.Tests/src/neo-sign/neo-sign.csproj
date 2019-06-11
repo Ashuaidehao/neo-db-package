@@ -6,6 +6,7 @@
     <RootNamespace>Neo</RootNamespace>
     <ApplicationIcon />
     <OutputType>Exe</OutputType>
+    <Configurations>Debug;Release;DebugPlugins</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
