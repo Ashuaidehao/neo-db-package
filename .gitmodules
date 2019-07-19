@@ -10,3 +10,6 @@
 [submodule "neo-vm"]
 	path = neo-vm
 	url = https://github.com/Ashuaidehao/neo-vm.git
+[submodule "neo-gui"]
+	path = neo-gui
+	url = https://github.com/Ashuaidehao/neo-gui.git
