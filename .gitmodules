@@ -1,15 +1,15 @@
-[submodule "neo-cli"]
-	path = neo-cli
-	url = https://github.com/Ashuaidehao/neo-cli.git
+[submodule "neo-vm"]
+	path = neo-vm
+	url = https://github.com/Ashuaidehao/neo-vm.git
 [submodule "neo"]
 	path = neo
 	url = https://github.com/Ashuaidehao/neo.git
 [submodule "neo-plugins"]
 	path = neo-plugins
 	url = https://github.com/Ashuaidehao/neo-plugins.git
-[submodule "neo-vm"]
-	path = neo-vm
-	url = https://github.com/Ashuaidehao/neo-vm.git
+[submodule "neo-cli"]
+	path = neo-cli
+	url = https://github.com/Ashuaidehao/neo-cli.git
 [submodule "neo-gui"]
 	path = neo-gui
 	url = https://github.com/Ashuaidehao/neo-gui.git
